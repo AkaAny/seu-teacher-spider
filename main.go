@@ -46,7 +46,7 @@ func main() {
 			var teachers = department.GetTeachers()
 			for _, teacher := range teachers {
 				var teacherInfo = teacher.GetInfo()
-				var savePath = filepath.Join(basePath, teacher.Name)
+				var savePath = filepath.Join(basePath, teacher.Name+".json")
 				fmt.Println(savePath)
 				rawData, err := json.MarshalIndent(teacherInfo, "", "    ")
 				if err != nil {
